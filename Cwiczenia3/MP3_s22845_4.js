@@ -52,7 +52,7 @@ let deq = 2 * dy;
 let dinc = 2 * dy - 2 * dx;
 
 let d = dp;
-let y = y0;
+let y = Math.round(y0);
 
 
 // console.log("a: " + a);
@@ -64,14 +64,13 @@ let y = y0;
 // }
 
 for(x=x0; x<=x1; x++){
-  set_pixel(x,y,d);
+  set_pixel(x,Math.round(y),0);
   if (d < 0) {
     d += deq;
   } else {
     d += dinc;
     y += 1;
   }
-
 }
 
 }
